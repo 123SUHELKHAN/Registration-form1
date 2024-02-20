@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="Reg.css">
+</head>
+<body>
+<div class="container">
+  <h2>Registration Form</h2>
+  <form id="registrationForm" action="thecomputerlanguage.co.in" method="post">
+    
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    
+    <label for="securityQuestion">Security Question</label>
+    <select id="securityQuestion" name="securityQuestion" required>
+      <option value="">Select a security question</option>
+      <option value="question1">Question 1.What city were you born in?</option>
+      <option value="question2">Question 2.What are you love me?</option>
+    </select>
+    <label for="securityAnswer">Security Answer</label>
+    <input type="text" id="securityAnswer" name="securityAnswer" required>
+
+  
+    <input type="checkbox" id="termsConditions" name="termsConditions" required>
+    <label for="termsConditions">I agree to the Terms and Conditions</label>
+
+    
+    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+    <label for="privacyPolicy">I agree to the Privacy Policy</label>
+
+
+
+
+    
+    <button id="submit">Submit</button>
+  </form>
+</div>
+<script>document.getElementById('submit').addEventListener('click', function(){alert('Thankyou Sir!')});
+  let fullName = document.getElementById('fullName').value;
+  let email = document.getElementById('email').value;
+  let username = document.getElementById('username').value;
+  let password = document.getElementById('password').value;
+  let securityQuestion = document.getElementById('securityQuestion').value;
+  let securityAnswer = document.getElementById('securityAnswer').value;
+  let termsConditions = document.getElementById('termsConditions').checked;
+  let privacyPolicy = document.getElementById('privacyPolicy').checked;
+
+  if (!fullName || !email || !username || !password || !securityQuestion || !securityAnswer || !termsConditions || !privacyPolicy) {
+    alert('pura fill karna nahi to!.');
+    event.preventDefault();
+  }
+  
+</script>
+</body>
+</html>
